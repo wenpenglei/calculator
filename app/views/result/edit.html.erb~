@@ -1,0 +1,14 @@
+<h1>Result#edit</h1>
+<%= form_tag "/result/index", :method => :get%>
+
+<div class="field">
+  <%= label_tag :number1 %>
+  <%= text_field_tag :number1, params[:number1] %>  <br/>
+  <%= select_tag "method", options_for_select({"+"=>"+","-"=>"-","*"=>"*","/"=>"/"}) %>
+  <div class="field">
+    <%= label_tag :number2 %>
+    <%= text_field_tag :number2, params[:number2] %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "result" %>
+  </div>

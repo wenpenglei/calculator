@@ -1,0 +1,18 @@
+<%= form_tag "/home/index", :method => :get %>
+
+<div class="field">
+  <%= label_tag :one %>
+  <%= text_field_tag :one, params[:one] %>
+  <%= select_tag "method", options_for_select({"+"=>"+","-"=>"-","*"=>"*","/"=>"/"}) %>
+  <div class="field">
+    <%= label_tag :two %>
+    <%= text_field_tag :two, params[:two] %>
+  </div>
+  <div class="field">
+    <%= label_tag :result %>
+    <%= text_field_tag "ajajaj", @result %>
+  </div>
+  <%= @result %>
+  <div class="actions">
+    <%= submit_tag "submit" %>
+  </div>

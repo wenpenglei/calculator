@@ -1,0 +1,9 @@
+<%= form_tag "/",  {:method => :get}%>
+<%= label_tag :url %>
+<%= text_field_tag :url, params[:client]%>
+<div class="actions">
+  <%= submit_tag "submit" %>
+
+  <% @urls.each do |url| %>
+    <p><%= link_to url.text, url.url %></p>
+  <% end %>
